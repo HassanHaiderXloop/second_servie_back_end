@@ -48,6 +48,7 @@ public class CartController {
     }
     @DeleteMapping("/delete/all")
     public ResponseEntity<String> deleteCarts(){
+        
        try{ 
         cartRepository.deleteAll();
         return new ResponseEntity<>(null,HttpStatus.OK);
